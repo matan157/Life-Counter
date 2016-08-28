@@ -4,10 +4,17 @@ app.controller('MainController', function($scope) {
     $scope.players = [];
     $scope.players.push(new Player());
 
+    // Adds players
     $scope.addPlayer = function() {
         $scope.players.push(new Player());
     }
 
+    // Removes players
+    $scope.rempvePlayer = function(index) {
+        $scope.players.slice(index, 1);
+    }
+
+    // Player object
     function Player() {
         this.life = 20;
         this.add = function(n) {
