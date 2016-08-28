@@ -9,9 +9,34 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <div ng-app="app">
-
+<body ng-app="lifeCounter">
+    <div ng-controller="MainController">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" ng-repeat="player in players">
+                    <div class="player">
+                        <div class="refresh"><a href="#" ng-click="player.reset()">Refresh</a></div>
+                        <div class="life">
+                            {{ player.life }}
+                        </div>
+                        <div class="life-buttons">
+                            <div class="life-button">
+                                <a href="#" ng-click="player.sub(1)">-</a> 1 <a href="#" ng-click="player.add(1)"> + </a>
+                            </div>
+                            <div class="life-button">
+                                <a href="#" ng-click="player.sub(5)">-</a> 5 <a href="#" ng-click="player.add(5)"> + </a>
+                            </div>
+                            <div class="life-button">
+                                <a href="#" ng-click="player.sub(10)">-</a> 10 <a href="#" ng-click="player.add(10)"> + </a>
+                            </div>
+                            <div class="life-button">
+                                <a href="#" ng-click="player.sub(20)">-</a> 20 <a href="#" ng-click="player.add(20)"> + </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

@@ -1,0 +1,20 @@
+.player {
+    text-align: center;
+    font-size: 2em;
+}
+
+.player a,
+.player a:hover,
+.player a:visited,
+.player a:active {
+    text-decoration: none;
+}
+
+.player .refresh {
+    font-size: 0.5em;
+    text-align: right;
+}
+
+.life {
+    font-size: 4em;
+}
