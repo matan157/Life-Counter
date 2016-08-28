@@ -10,9 +10,16 @@
     text-decoration: none;
 }
 
-.player .refresh {
+.player .player-actions {
     font-size: 0.5em;
+}
+
+.refresh {
     text-align: right;
+}
+
+.remove {
+	text-align: left;
 }
 
 .life {

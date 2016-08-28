@@ -10,8 +10,8 @@ app.controller('MainController', function($scope) {
     }
 
     // Removes players
-    $scope.rempvePlayer = function(index) {
-        $scope.players.slice(index, 1);
+    $scope.removePlayer = function(index) {
+        $scope.players.splice(index, 1);
     }
 
     // Player object
