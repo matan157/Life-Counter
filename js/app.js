@@ -1,6 +1,22 @@
 var app = angular.module('lifeCounter', []);
 
-app.controller('MainController', function($scope) {
+app.factory('Player', function(){
+	function PlayerObject() {
+		this.life = 20;
+		this.add = function(n) {
+            this.life += n;
+        };
+        this.sub = function(n) {
+            this.life -= n;
+        };
+        this.reset = function(n) {
+            this.life = 20;
+        };
+	};
+	return PlayerObject;
+});
+
+app.controller('MainController', function($scope, Player) {
     $scope.players = [];
     $scope.players.push(new Player());
 
@@ -14,17 +30,4 @@ app.controller('MainController', function($scope) {
         $scope.players.splice(index, 1);
     }
 
-    // Player object
-    function Player() {
-        this.life = 20;
-        this.add = function(n) {
-            this.life += n;
-        };
-        this.sub = function(n) {
-            this.life -= n;
-        };
-        this.reset = function(n) {
-            this.life = 20;
-        };
-    }
 });
