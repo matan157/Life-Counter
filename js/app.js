@@ -10,7 +10,7 @@ app.controller('MainController', function($scope) {
     }
 
     // Removes players
-    $scope.rempvePlayer = function(index) {
+    $scope.removePlayer = function(index) {
         $scope.players.slice(index, 1);
     }
 
